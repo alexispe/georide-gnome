@@ -32,7 +32,7 @@ const GeoRideIndicator = new Lang.Class({
 
     this.menuItem = new PopupMenu.PopupMenuItem('0km');
     this.menuItemLocaliser = new PopupMenu.PopupMenuItem('Localiser');
-    this.switchmenuitem = new PopupMenu.PopupSwitchMenuItem('Vérrouillée',false);
+    this.switchmenuitem = new PopupMenu.PopupSwitchMenuItem('Verrouillée',false);
     // this.menuItem.label = new St.Label({ text: 'la bize' });
     // this.menuItem.actor.add_child(this.menuItem.label);
 
@@ -65,7 +65,7 @@ const GeoRideIndicator = new Lang.Class({
     // log('[GEORIDE_LOG]', JSON.stringify(data[0]));
     let trackerName = data[0].trackerName.toString();
     let status = data[0].status.toString();
-    let isLocked = data[0].isLocked ? 'Vérrouillée' : 'Déverouillée';
+    let isLocked = data[0].isLocked ? 'Verrouillée' : 'Déverouillée';
     txt = trackerName + ' ' + isLocked;
     this.buttonText.set_text(txt);
     this.menuItem.actor.label_actor.set_text((data[0].odometer/1000)+'km');
@@ -151,7 +151,7 @@ const GeoRideIndicator = new Lang.Class({
       if (message.status_code !== 200) return;
       this._apiGetTrackers();
       let json = JSON.parse(message.response_body.data);
-      if(json.locked) Main.notify(_apiTrackers[0].trackerName + ' Vérrouillée');
+      if(json.locked) Main.notify(_apiTrackers[0].trackerName + ' Verrouillée');
       else  Main.notify(_apiTrackers[0].trackerName + ' Déverouillée')
     }));
   },
@@ -164,7 +164,7 @@ const GeoRideIndicator = new Lang.Class({
     _httpSession.queue_message(message, Lang.bind(this, function (_httpSession, message) {
       // log('[GEORIDE_LOG]', message.response_body.data);
       this._apiGetTrackers();
-      Main.notify(_apiTrackers[0].trackerName + ' Vérrouillée');
+      Main.notify(_apiTrackers[0].trackerName + ' Verrouillée');
     }));
   },
 

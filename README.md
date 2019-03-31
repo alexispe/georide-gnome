@@ -5,11 +5,11 @@
 > Extension non officielle.
 
 Ceci est une incroyable extension GNOME Shell qui va te permettre de communiquer avec ta moto comme par magie :
-- Affiche l'état de vérrouillage de ton tracker dans la status bar
+- Affiche l'état de verrouillage de ton tracker dans la status bar
 - Affiche une incroyable popup te permettant de :
   - Voir le nombre de km de la moto
   - Localiser la moto sur google maps
-  - Vérrouiller/Déverrouiller la moto
+  - Verrouiller/Déverrouiller la moto
 
 ![Demo Popup GeoBobo](https://raw.githubusercontent.com/alexispe/georide-gnome/master/georide-popup.png)
 
