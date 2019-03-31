@@ -69,7 +69,11 @@ const GeoRideIndicator = new Lang.Class({
     txt = trackerName + ' ' + isLocked;
     this.buttonText.set_text(txt);
     this.menuItem.actor.label_actor.set_text((data[0].odometer/1000)+'km');
-    if(data[0].isLocked) this.switchmenuitem.setToggleState(true);
+    if(data[0].isLocked) { // si on est lock, on active le boutton
+      this.switchmenuitem.setToggleState(true);
+    } else { // Sinon, on le desactive
+      this.switchmenuitem.setToggleState(false);
+    }
   },
 
   _removeTimeout: function () {
