@@ -41,7 +41,7 @@ const GeoRideIndicator = new Lang.Class({
     this.menu.addMenuItem(this.switchmenuitem);
 
     this.menuItemLocaliser.actor.connect('button-press-event', Lang.bind(this, function() {
-      Util.spawnCommandLine("sensible-browser https://www.google.com/maps/search/?api=1&query="+_apiTrackers[0].latitude+","+_apiTrackers[0].longitude);
+      Util.spawnCommandLine("xdg-open https://www.google.com/maps/search/?api=1&query="+_apiTrackers[0].latitude+","+_apiTrackers[0].longitude);
     }));
     this.switchmenuitem.connect('toggled', Lang.bind(this, function(object, value){
       if(value) this._apiLockTracker();
