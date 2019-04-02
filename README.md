@@ -46,5 +46,7 @@ Toute proposition d'amélioration est la bienvenue. Si vous rencontrez un probl�
 
 ## À faire
 - [ ] Sauvegarder le token pour ne pas se reconnecter à chaque requête
+- [ ] Exporter les identifiants dans un autre fichier + .gitignore
+- [ ] Intégrer [GSocket](https://developer.gnome.org/gio/stable/GSocket.html) pour les notifications
 
 🇫🇷 ✌️
